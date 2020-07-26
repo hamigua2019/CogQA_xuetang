@@ -8,11 +8,15 @@ CogQA是一个解决互联网大规模问答多跳问题的新框架。与此前
 
 数据集中举了一些问答和答案的例子有助于理解本框架。比如“Which magazine was started first Arthur's Magazine or First for Women?”、“The Oberoi family is part of a hotel company that has a head office in what city？”、“What nationality was James Henry Miller's wife？”等等。
 
+Bert和GAN都是近年来较新的深度学习框架，在多个领域有深入广泛的应用。本论文创新性地运用这两个框架，也取得了有实际意义的成果。
+
 二. 运行结果与论文结果比较
 
 如下为作业跑出的结果。performance不如论文中给出的。
 
 原因可能是因为未将参数调整到合适状态。
+
+作业跑出的结果：
 
 {'em': 0.20229574611748818, 'f1': 0.28453167784528083, 'prec': 0.2980000643066138, 'recall': 0.29234633104424973, 
 
@@ -20,7 +24,10 @@ CogQA是一个解决互联网大规模问答多跳问题的新框架。与此前
 
 'joint_em': 0.041188386225523295, 'joint_f1': 0.16846707791924628, 'joint_prec': 0.20438624900745073, 'joint_recall': 0.1717743266275058}
 
-论文结果
+论文中给出的对应结果：
+
+
+
 
 三. 论文实施过程与细节
 
