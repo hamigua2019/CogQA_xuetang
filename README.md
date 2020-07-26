@@ -16,7 +16,7 @@ Bert和GCN都是近年来较新的深度学习框架，在多个领域有深入�
 
 如下为作业未调参情况下跑出的结果。performance远不如论文中给出的，差得较多，第一行em差20%左右，第二行sp-em行差15%左右，第三行'joint_em'差19%左右。
 
-原因可能是因为未将参数调整到合适状态。
+原因是未将参数调整到合适状态。论文中参数为，batch_size = 10, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 4*1e-5, alpha = 0.01)，而作业跑的参数也就是Github中对应参数为batch_size = 12, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 1e-4, alpha = 0.2):
 
 作业跑出的结果：
 
