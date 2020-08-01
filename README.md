@@ -65,7 +65,7 @@ Bert和GCN都是近年来较新的深度学习框架，在多个领域有深入�
 
 五. 提升与改进工作
 
-复现后performance与原结果差距较大，考虑调参初步改变结果。试着将drop-out从0.2改为0.1，但造成CUDA：out of memory的bug。于是未修正。
+复现后performance与原结果差距较大，考虑调参初步改变结果。试着将drop-out从0.2改为0.1，但造成CUDA：out of memory的bug，所以未能再复现比较是否能提升performance。
 
 推测，对数据预处理进行改进能带来performance一定程度的提高；在模型结构方面，可能也有改进的空间。但目前暂时未有进一步深入的idea，有待于在接下来的学习研究中持续改进。
 
