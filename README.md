@@ -21,7 +21,7 @@ Bert和GCN都是近年来较新的深度学习框架，在多个领域有深入�
 
 如下为作业未调参情况下跑出的结果。performance远不如论文中给出的，差得较多，第一行em差20%左右，第二行sp-em行差15%左右，第三行'joint_em'差19%左右。
 
-原因是未将参数调整到合适状态。论文中bert-base-uncased的参数为，batch_size = 10, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 4*1e-5, alpha = 0.01)，而作业跑的参数也就是Github中对应参数为batch_size = 12, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 1e-4, alpha = 0.2):
+预计原因是未将参数调整到合适状态。论文中bert-base-uncased的参数为，batch_size = 10, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 4*1e-5, alpha = 0.01)，而作业跑的参数也就是Github中对应参数为batch_size = 12, num_epoch = 1, gradient_accumulation_steps = 1, lr1 = 1e-4, lr2 = 1e-4, alpha = 0.2):
 
 如果将参数调整位论文状态，估计结果应该可以同步复现。由于时间因素，尚未能验证，留待以后验证。
 
@@ -65,8 +65,8 @@ Bert和GCN都是近年来较新的深度学习框架，在多个领域有深入�
 
 五. 提升与改进工作
 
-本次因为时间因素，还有水平因素，只复现了代码，未来得及对模型进行改进。
+复现后performance与原结果差距较大，考虑调参初步改变结果。试着将drop-out从0.2改为0.1，但造成CUDA：out of memory的bug。于是未修正。
 
-推测对数据预处理进行改进能带来performance一定程度的提高；在模型结构方面，可能也有改进的空间。但目前暂时未有进一步深入的idea，有待于在接下来的学习研究中持续改进。
+推测，对数据预处理进行改进能带来performance一定程度的提高；在模型结构方面，可能也有改进的空间。但目前暂时未有进一步深入的idea，有待于在接下来的学习研究中持续改进。
 
 感谢老师的批阅，请多多批评指正，再次感谢：）
